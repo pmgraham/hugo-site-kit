@@ -1,0 +1,25 @@
+# Sveltia CMS configuration.
+# Per-site setup (see SETUP.md): change `repo` and `base_url` below,
+# then replace the example collection with this site's content model.
+
+backend:
+  name: github
+  repo: OWNER/REPO # ← your GitHub org/repo, e.g. pmgraham/family-business-site
+  branch: main
+  base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev # ← your shared OAuth worker URL
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Pages
+    folder: content
+    create: true
+    extension: md
+    format: toml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown }
