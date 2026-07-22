@@ -1,6 +1,6 @@
 # Replace baseURL and title when creating a new site from this template.
 baseURL = 'https://example.com/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'Hugo Site Kit'
 
 disableKinds = ['taxonomy', 'term']
