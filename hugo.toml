@@ -1,0 +1,11 @@
+# Replace baseURL and title when creating a new site from this template.
+baseURL = 'https://example.com/'
+languageCode = 'en-us'
+title = 'Hugo Site Kit'
+
+disableKinds = ['taxonomy', 'term']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
